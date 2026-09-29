@@ -1,0 +1,45 @@
+[build-system]
+requires = ["setuptools>=65.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "customer-retention-churn-intelligence"
+version = "1.0.0"
+description = "End-to-End Customer Analytics, Churn Prediction, Explainable AI & Retention Decision Platform"
+readme = "README.md"
+authors = [{ name = "Analytics & Data Science Team" }]
+license = { text = "MIT" }
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb>=1.1.0",
+    "joblib>=1.3.0",
+    "lightgbm>=4.0.0",
+    "matplotlib>=3.8.0",
+    "numpy>=1.26.0",
+    "pandas>=2.1.0",
+    "pytest>=8.0.0",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.4.0",
+    "scipy>=1.12.0",
+    "seaborn>=0.13.0",
+    "shap>=0.45.0",
+    "statsmodels>=0.14.0",
+    "streamlit>=1.30.0",
+    "xgboost>=2.0.0"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-cov>=4.1.0",
+    "black>=24.0.0",
+    "flake8>=7.0.0"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["src*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

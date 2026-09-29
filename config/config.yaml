@@ -1,0 +1,88 @@
+# Customer Retention & Churn Intelligence - Master Configuration
+
+project:
+  name: "Customer Retention & Churn Intelligence"
+  version: "1.0.0"
+  random_state: 42
+
+paths:
+  raw_data_dir: "data/raw"
+  raw_csv: "data/raw/Telco-Customer-Churn.csv"
+  processed_data_dir: "data/processed"
+  duckdb_database: "data/processed/customer_retention.duckdb"
+  models_dir: "models"
+  outputs_dir: "outputs"
+  metrics_dir: "outputs/metrics"
+  predictions_dir: "outputs/predictions"
+  shap_dir: "outputs/shap"
+  charts_dir: "outputs/charts"
+  reports_dir: "outputs/reports"
+  powerbi_dir: "outputs/powerbi"
+
+data:
+  id_column: "customerID"
+  target_column: "Churn"
+  positive_label: "Yes"
+  negative_label: "No"
+  total_charges_column: "TotalCharges"
+  monthly_charges_column: "MonthlyCharges"
+  tenure_column: "tenure"
+
+splitting:
+  test_size: 0.20
+  val_size: 0.20
+  stratify: true
+  random_state: 42
+
+features:
+  numerical:
+    - "tenure"
+    - "MonthlyCharges"
+    - "TotalCharges"
+  categorical_binary:
+    - "gender"
+    - "SeniorCitizen"
+    - "Partner"
+    - "Dependents"
+    - "PhoneService"
+    - "PaperlessBilling"
+  categorical_multi:
+    - "MultipleLines"
+    - "InternetService"
+    - "OnlineSecurity"
+    - "OnlineBackup"
+    - "DeviceProtection"
+    - "TechSupport"
+    - "StreamingTV"
+    - "StreamingMovies"
+    - "Contract"
+    - "PaymentMethod"
+
+modeling:
+  baseline:
+    algorithm: "LogisticRegression"
+    C: 0.1
+    penalty: "l2"
+    solver: "lbfgs"
+    max_iter: 1000
+  advanced:
+    algorithm: "XGBoost"
+    n_estimators: 180
+    max_depth: 4
+    learning_rate: 0.05
+    subsample: 0.85
+    colsample_bytree: 0.8
+    min_child_weight: 3
+    gamma: 0.2
+    scale_pos_weight: 1.0
+  decision_threshold: 0.38  # Empirically optimized on PR curve & business cost matrix
+
+business:
+  currency: "$"
+  monthly_retention_cost: 20.0        # Cost of retention outreach/offer per customer
+  retention_success_rate: 0.35       # Estimated fraction of reachable customers retained
+  risk_segments:
+    low: [0.00, 0.25]
+    medium: [0.25, 0.50]
+    high: [0.50, 0.75]
+    critical: [0.75, 1.00]
