@@ -19,7 +19,6 @@ if str(REPO_ROOT) not in sys.path:
 
 import joblib
 import matplotlib.pyplot as plt
-import numpy as np
 import pandas as pd
 import streamlit as st
 
@@ -66,17 +65,16 @@ def load_datasets():
 
 
 @st.cache_resource
-def load_model_pipeline():
+def load_model_pipeline() -> ChurnExplainer:
     model = joblib.load("models/churn_model.joblib")
     preprocessor = joblib.load("models/preprocessing_pipeline.joblib")
     metadata = load_json("models/model_metadata.json")
     feature_names = metadata["feature_names"]
-    explainer = ChurnExplainer(model, preprocessor, feature_names)
-    return model, preprocessor, feature_names, explainer
+    return ChurnExplainer(model, preprocessor, feature_names)
 
 
 df_customers, metadata, kpis, shap_importance = load_datasets()
-model, preprocessor, feature_names, explainer = load_model_pipeline()
+explainer = load_model_pipeline()
 
 # Sidebar Navigation
 st.sidebar.title("🎯 Retention Platform")
@@ -323,6 +321,9 @@ elif page == "Model Governance & Metrics":
     if shap_img.exists():
         st.image(str(shap_img), caption="SHAP Summary Plot (Top Predictive Associations)")
 
+    st.markdown("#### Global Feature Importance Rankings")
+    st.dataframe(pd.DataFrame(shap_importance).head(15), use_container_width=True)
+
 # -------------------------------------------------------------
 # PAGE 4: RETENTION PRIORITIZATION MATRIX
 # -------------------------------------------------------------
@@ -354,13 +355,16 @@ elif page == "Retention Prioritization Matrix":
     st.dataframe(matrix_counts, use_container_width=True)
 
     st.markdown("---")
-    st.subheader("Actionable Customer Export (Tier 1 & Tier 2 Priorities)")
-    export_df = df_customers[
-        df_customers["retention_priority_tier"].isin(["Tier 1: VIP Urgent Outreach", "Tier 2: Automated Campaign Offer"])
-    ][[
+    priority_mask = df_customers["retention_priority_tier"].isin([
+        "Tier 1: VIP Urgent Outreach", "Tier 2: Automated Campaign Offer"
+    ])
+    selected_cols = [
         "customer_id", "retention_priority_tier", "risk_segment", "churn_probability",
         "monthly_revenue_exposure", "monthly_revenue_at_risk", "top_risk_driver", "recommended_action"
-    ]].sort_values(by="monthly_revenue_at_risk", ascending=False)
+    ]
+    export_df = df_customers.loc[priority_mask, selected_cols].sort_values(
+        by="monthly_revenue_at_risk", ascending=False
+    )
 
     st.dataframe(export_df.head(25), use_container_width=True)
 
