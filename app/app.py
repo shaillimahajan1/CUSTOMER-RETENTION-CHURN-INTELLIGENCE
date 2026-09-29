@@ -183,12 +183,13 @@ elif page == "Customer Risk 360 & SHAP":
     st.title("🔍 Customer 360 Risk Profile & SHAP Explainability")
     st.caption("Inspect individual subscriber risk factors, predictive drivers, and tailored retention intervention playbooks.")
 
-    # High risk selector
+    # High risk selector across full customer cohort
     high_risk_ids = df_customers.sort_values(by="churn_probability", ascending=False)["customer_id"].tolist()
     selected_cust_id = st.selectbox(
-        "Select Customer ID (sorted by highest churn risk):",
-        options=high_risk_ids[:300],
+        "Select Customer ID (ordered from highest to lowest predicted churn risk):",
+        options=high_risk_ids,
         index=0,
+        help="Search or select any customer ID across the entire 7,043 subscriber cohort."
     )
 
     cust_row = df_customers[df_customers["customer_id"] == selected_cust_id].iloc[0]
@@ -206,7 +207,7 @@ elif page == "Customer Risk 360 & SHAP":
 
     st.info(f"🎯 **Recommended Action:** {cust_row['recommended_action']}")
 
-    # Customer Attributes Table
+    # Customer Attributes Table (3-column responsive grid layout)
     st.subheader("Customer Characteristics")
     attr_col1, attr_col2, attr_col3 = st.columns(3)
     with attr_col1:
@@ -220,6 +221,7 @@ elif page == "Customer Risk 360 & SHAP":
     with attr_col3:
         st.write(f"**Priority Tier:** {cust_row['retention_priority_tier']}")
         st.write(f"**Observed Top Driver:** {cust_row['top_risk_driver']}")
+        st.write(f"**Add-on Services:** {cust_row.get('addon_services_count', 'N/A')} active bundles")
 
     # SHAP Local Explanation
     st.subheader("Explainable AI (SHAP) - Individual Feature Attribution")
