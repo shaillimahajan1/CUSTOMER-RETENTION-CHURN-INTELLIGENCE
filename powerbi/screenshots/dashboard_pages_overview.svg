@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Top Header Bar -->
+  <rect x="0" y="0" width="1200" height="70" fill="#1e293b" opacity="0.95"/>
+  <rect x="0" y="68" width="1200" height="2" fill="url(#accent)"/>
+  <text x="30" y="44" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="700">Customer Retention &amp; Churn Intelligence</text>
+  <text x="500" y="44" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14">Power BI Enterprise Dashboard Architecture</text>
+  <rect x="1050" y="22" width="120" height="28" rx="14" fill="#3b82f6" opacity="0.2"/>
+  <text x="1075" y="41" fill="#38bdf8" font-family="sans-serif" font-size="12" font-weight="600">v1.0.0 Active</text>
+
+  <!-- 5 Dashboard Pages Visual Grid -->
+  <!-- Page 1: Executive Overview -->
+  <g transform="translate(30, 95)" filter="url(#shadow)">
+    <rect width="360" height="320" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="360" height="38" rx="8" fill="#334155"/>
+    <text x="16" y="24" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="600">Page 1: Executive Retention &amp; Revenue</text>
+    
+    <!-- KPIs -->
+    <rect x="12" y="48" width="76" height="52" rx="4" fill="#0f172a"/>
+    <text x="18" y="64" fill="#94a3b8" font-size="9">Total Base</text>
+    <text x="18" y="86" fill="#38bdf8" font-size="14" font-weight="bold">7,043</text>
+
+    <rect x="96" y="48" width="76" height="52" rx="4" fill="#0f172a"/>
+    <text x="102" y="64" fill="#94a3b8" font-size="9">Churn Rate</text>
+    <text x="102" y="86" fill="#f87171" font-size="14" font-weight="bold">26.5%</text>
+
+    <rect x="180" y="48" width="84" height="52" rx="4" fill="#0f172a"/>
+    <text x="186" y="64" fill="#94a3b8" font-size="9">High Risk</text>
+    <text x="186" y="86" fill="#fbbf24" font-size="14" font-weight="bold">1,515</text>
+
+    <rect x="272" y="48" width="76" height="52" rx="4" fill="#0f172a"/>
+    <text x="278" y="64" fill="#94a3b8" font-size="9">Rev at Risk</text>
+    <text x="278" y="86" fill="#ec4899" font-size="13" font-weight="bold">$140.0K</text>
+
+    <!-- Mini Charts -->
+    <rect x="12" y="112" width="160" height="90" rx="4" fill="#0f172a"/>
+    <text x="18" y="126" fill="#cbd5e1" font-size="10">Risk Segments</text>
+    <circle cx="92" cy="162" r="28" fill="none" stroke="#22c55e" stroke-width="10" stroke-dasharray="100 80"/>
+    <circle cx="92" cy="162" r="28" fill="none" stroke="#ef4444" stroke-width="10" stroke-dasharray="45 130" stroke-dashoffset="-100"/>
+
+    <rect x="188" y="112" width="160" height="90" rx="4" fill="#0f172a"/>
+    <text x="194" y="126" fill="#cbd5e1" font-size="10">Churn by Contract</text>
+    <rect x="200" y="140" width="130" height="12" rx="2" fill="#ef4444"/>
+    <rect x="200" y="160" width="40" height="12" rx="2" fill="#3b82f6"/>
+    <rect x="200" y="180" width="15" height="12" rx="2" fill="#22c55e"/>
+
+    <rect x="12" y="214" width="336" height="92" rx="4" fill="#0f172a"/>
+    <text x="18" y="232" fill="#cbd5e1" font-size="10">Monthly Spend vs Churn Probability Exposure</text>
+    <path d="M 24 285 Q 90 270 160 250 T 320 230" fill="none" stroke="#38bdf8" stroke-width="2.5"/>
+  </g>
+
+  <!-- Page 2: Cohort & Lifecycle -->
+  <g transform="translate(420, 95)" filter="url(#shadow)">
+    <rect width="360" height="320" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="360" height="38" rx="8" fill="#334155"/>
+    <text x="16" y="24" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="600">Page 2: Cohort &amp; Lifecycle Dynamics</text>
+
+    <rect x="12" y="48" width="336" height="125" rx="4" fill="#0f172a"/>
+    <text x="18" y="66" fill="#cbd5e1" font-size="10">Tenure Retention Curve (Month 0 to 72)</text>
+    <path d="M 24 85 C 80 145, 180 155, 330 162" fill="none" stroke="#f43f5e" stroke-width="2.5"/>
+    <text x="45" y="125" fill="#fca5a5" font-size="9">Early Cliff (0-6m: 47% churn)</text>
+
+    <rect x="12" y="182" width="336" height="124" rx="4" fill="#0f172a"/>
+    <text x="18" y="200" fill="#cbd5e1" font-size="10">Contract Cohort Retention Matrix (Heatmap)</text>
+    <rect x="24" y="212" width="68" height="24" fill="#7f1d1d"/><text x="36" y="228" fill="#fecaca" font-size="10">52.9%</text>
+    <rect x="98" y="212" width="68" height="24" fill="#991b1b"/><text x="110" y="228" fill="#fecaca" font-size="10">68.4%</text>
+    <rect x="172" y="212" width="68" height="24" fill="#14532d"/><text x="184" y="228" fill="#bbf7d0" font-size="10">88.7%</text>
+    <rect x="246" y="212" width="68" height="24" fill="#166534"/><text x="258" y="228" fill="#bbf7d0" font-size="10">97.2%</text>
+  </g>
+
+  <!-- Page 3: Risk Register -->
+  <g transform="translate(810, 95)" filter="url(#shadow)">
+    <rect width="360" height="320" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="360" height="38" rx="8" fill="#334155"/>
+    <text x="16" y="24" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="600">Page 3: Account Risk Register</text>
+
+    <!-- Table Header -->
+    <rect x="12" y="48" width="336" height="25" rx="3" fill="#334155"/>
+    <text x="20" y="64" fill="#94a3b8" font-size="9" font-weight="bold">Customer ID</text>
+    <text x="100" y="64" fill="#94a3b8" font-size="9" font-weight="bold">Risk</text>
+    <text x="155" y="64" fill="#94a3b8" font-size="9" font-weight="bold">Prob</text>
+    <text x="205" y="64" fill="#94a3b8" font-size="9" font-weight="bold">Rev@Risk</text>
+    <text x="270" y="64" fill="#94a3b8" font-size="9" font-weight="bold">Action</text>
+
+    <!-- Table Rows -->
+    <rect x="12" y="77" width="336" height="36" fill="#0f172a"/>
+    <text x="20" y="99" fill="#f8fafc" font-size="10">7590-VHVEG</text>
+    <rect x="95" y="86" width="48" height="18" rx="9" fill="#ef4444" opacity="0.2"/>
+    <text x="104" y="99" fill="#f87171" font-size="9">Critical</text>
+    <text x="155" y="99" fill="#fca5a5" font-size="10">84.2%</text>
+    <text x="205" y="99" fill="#cbd5e1" font-size="10">$68.40</text>
+    <text x="270" y="99" fill="#38bdf8" font-size="9">VIP Call</text>
+
+    <rect x="12" y="117" width="336" height="36" fill="#1e293b"/>
+    <text x="20" y="139" fill="#f8fafc" font-size="10">5575-GNVDE</text>
+    <rect x="95" y="126" width="48" height="18" rx="9" fill="#f59e0b" opacity="0.2"/>
+    <text x="107" y="139" fill="#fbbf24" font-size="9">High</text>
+    <text x="155" y="139" fill="#fde68a" font-size="10">67.1%</text>
+    <text x="205" y="139" fill="#cbd5e1" font-size="10">$45.10</text>
+    <text x="270" y="139" fill="#38bdf8" font-size="9">Discount</text>
+
+    <rect x="12" y="157" width="336" height="36" fill="#0f172a"/>
+    <text x="20" y="179" fill="#f8fafc" font-size="10">3668-QPYVD</text>
+    <rect x="95" y="166" width="48" height="18" rx="9" fill="#f59e0b" opacity="0.2"/>
+    <text x="107" y="179" fill="#fbbf24" font-size="9">High</text>
+    <text x="155" y="179" fill="#fde68a" font-size="10">59.8%</text>
+    <text x="205" y="179" fill="#cbd5e1" font-size="10">$52.20</text>
+    <text x="270" y="179" fill="#38bdf8" font-size="9">TechSupport</text>
+  </g>
+
+  <!-- Page 4: Predictive Drivers (SHAP) -->
+  <g transform="translate(180, 445)" filter="url(#shadow)">
+    <rect width="400" height="320" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="400" height="38" rx="8" fill="#334155"/>
+    <text x="16" y="24" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="600">Page 4: Predictive Drivers (SHAP AI)</text>
+
+    <rect x="12" y="48" width="376" height="258" rx="4" fill="#0f172a"/>
+    <text x="20" y="70" fill="#94a3b8" font-size="10">Mean |SHAP| Importance (Predictive Association)</text>
+
+    <!-- SHAP Horizontal Bars -->
+    <text x="20" y="98" fill="#cbd5e1" font-size="10">Month-to-month Contract</text>
+    <rect x="180" y="87" width="180" height="14" rx="2" fill="#ef4444"/>
+
+    <text x="20" y="128" fill="#cbd5e1" font-size="10">Tenure (Months)</text>
+    <rect x="180" y="117" width="155" height="14" rx="2" fill="#3b82f6"/>
+
+    <text x="20" y="158" fill="#cbd5e1" font-size="10">Monthly Charges</text>
+    <rect x="180" y="147" width="130" height="14" rx="2" fill="#ef4444"/>
+
+    <text x="20" y="188" fill="#cbd5e1" font-size="10">Fiber Optic Internet</text>
+    <rect x="180" y="177" width="105" height="14" rx="2" fill="#ef4444"/>
+
+    <text x="20" y="218" fill="#cbd5e1" font-size="10">Electronic Check</text>
+    <rect x="180" y="207" width="85" height="14" rx="2" fill="#ef4444"/>
+
+    <text x="20" y="248" fill="#cbd5e1" font-size="10">Online Security + Support</text>
+    <rect x="180" y="237" width="70" height="14" rx="2" fill="#22c55e"/>
+
+    <text x="20" y="285" fill="#64748b" font-size="9">*Note: Non-causal predictive attributions under XGBoost model</text>
+  </g>
+
+  <!-- Page 5: Retention Prioritization Matrix -->
+  <g transform="translate(620, 445)" filter="url(#shadow)">
+    <rect width="400" height="320" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+    <rect x="0" y="0" width="400" height="38" rx="8" fill="#334155"/>
+    <text x="16" y="24" fill="#f8fafc" font-family="sans-serif" font-size="14" font-weight="600">Page 5: Retention Prioritization Matrix (2x2)</text>
+
+    <rect x="12" y="48" width="376" height="258" rx="4" fill="#0f172a"/>
+
+    <!-- 2x2 Grid -->
+    <!-- Top Left: Tier 2 -->
+    <rect x="30" y="70" width="165" height="105" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1"/>
+    <text x="40" y="90" fill="#fbbf24" font-size="11" font-weight="bold">Tier 2: Automated Campaign</text>
+    <text x="40" y="110" fill="#94a3b8" font-size="10">High Risk | Standard Value</text>
+    <text x="40" y="135" fill="#f8fafc" font-size="13" font-weight="bold">1,031 Accounts</text>
+    <text x="40" y="155" fill="#fbbf24" font-size="11">$38.1K / mo at risk</text>
+
+    <!-- Top Right: Tier 1 VIP -->
+    <rect x="205" y="70" width="165" height="105" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="2"/>
+    <text x="215" y="90" fill="#f87171" font-size="11" font-weight="bold">Tier 1: VIP Outreach 🔥</text>
+    <text x="215" y="110" fill="#94a3b8" font-size="10">High Risk | High Value</text>
+    <text x="215" y="135" fill="#f8fafc" font-size="13" font-weight="bold">484 Accounts</text>
+    <text x="215" y="155" fill="#f87171" font-size="11">$45.2K / mo at risk</text>
+
+    <!-- Bottom Left: Tier 4 -->
+    <rect x="30" y="185" width="165" height="105" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="40" y="205" fill="#94a3b8" font-size="11" font-weight="bold">Tier 4: Monitor / Standard</text>
+    <text x="40" y="225" fill="#64748b" font-size="10">Low Risk | Standard Value</text>
+    <text x="40" y="250" fill="#f8fafc" font-size="13" font-weight="bold">4,251 Accounts</text>
+    <text x="40" y="270" fill="#94a3b8" font-size="11">Low Operational Cost</text>
+
+    <!-- Bottom Right: Tier 3 -->
+    <rect x="205" y="185" width="165" height="105" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+    <text x="215" y="205" fill="#60a5fa" font-size="11" font-weight="bold">Tier 3: Proactive Care</text>
+    <text x="215" y="225" fill="#94a3b8" font-size="10">Low Risk | High Value</text>
+    <text x="215" y="250" fill="#f8fafc" font-size="13" font-weight="bold">1,277 Accounts</text>
+    <text x="215" y="270" fill="#60a5fa" font-size="11">$21.4K / mo monitoring</text>
+  </g>
+</svg>
