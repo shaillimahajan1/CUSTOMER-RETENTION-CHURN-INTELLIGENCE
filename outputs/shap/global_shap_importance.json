@@ -1,0 +1,154 @@
+[
+  {
+    "feature": "is_month_to_month_1",
+    "mean_abs_shap": 0.6909763813018799
+  },
+  {
+    "feature": "tenure_months",
+    "mean_abs_shap": 0.3302513659000397
+  },
+  {
+    "feature": "monthly_charges",
+    "mean_abs_shap": 0.23974117636680603
+  },
+  {
+    "feature": "internet_service_Fiber optic",
+    "mean_abs_shap": 0.18483737111091614
+  },
+  {
+    "feature": "billing_stability_ratio",
+    "mean_abs_shap": 0.17437109351158142
+  },
+  {
+    "feature": "contract_type_Two year",
+    "mean_abs_shap": 0.16308002173900604
+  },
+  {
+    "feature": "total_charges",
+    "mean_abs_shap": 0.13594211637973785
+  },
+  {
+    "feature": "payment_method_Electronic check",
+    "mean_abs_shap": 0.12953440845012665
+  },
+  {
+    "feature": "has_paperless_billing_1",
+    "mean_abs_shap": 0.12322258204221725
+  },
+  {
+    "feature": "online_security_Yes",
+    "mean_abs_shap": 0.12224510312080383
+  },
+  {
+    "feature": "is_vulnerable_fiber_user_1",
+    "mean_abs_shap": 0.11561271548271179
+  },
+  {
+    "feature": "multiple_lines_Yes",
+    "mean_abs_shap": 0.102386474609375
+  },
+  {
+    "feature": "internet_service_No",
+    "mean_abs_shap": 0.10035500675439835
+  },
+  {
+    "feature": "streaming_movies_Yes",
+    "mean_abs_shap": 0.09051970392465591
+  },
+  {
+    "feature": "streaming_tv_Yes",
+    "mean_abs_shap": 0.0670519769191742
+  },
+  {
+    "feature": "contract_type_One year",
+    "mean_abs_shap": 0.06483100354671478
+  },
+  {
+    "feature": "is_high_risk_contract_spend_1",
+    "mean_abs_shap": 0.06126304343342781
+  },
+  {
+    "feature": "tech_support_Yes",
+    "mean_abs_shap": 0.05447082966566086
+  },
+  {
+    "feature": "is_senior_citizen_1",
+    "mean_abs_shap": 0.050743237137794495
+  },
+  {
+    "feature": "has_phone_service_1",
+    "mean_abs_shap": 0.046823836863040924
+  },
+  {
+    "feature": "has_dependents_1",
+    "mean_abs_shap": 0.04643906280398369
+  },
+  {
+    "feature": "online_backup_Yes",
+    "mean_abs_shap": 0.0416250079870224
+  },
+  {
+    "feature": "online_security_No internet service",
+    "mean_abs_shap": 0.038680411875247955
+  },
+  {
+    "feature": "is_electronic_check_1",
+    "mean_abs_shap": 0.0383613184094429
+  },
+  {
+    "feature": "is_fiber_optic_1",
+    "mean_abs_shap": 0.027898546308279037
+  },
+  {
+    "feature": "gender_Male",
+    "mean_abs_shap": 0.023452365770936012
+  },
+  {
+    "feature": "payment_method_Mailed check",
+    "mean_abs_shap": 0.015824992209672928
+  },
+  {
+    "feature": "multiple_lines_No phone service",
+    "mean_abs_shap": 0.011935260146856308
+  },
+  {
+    "feature": "payment_method_Credit card (automatic)",
+    "mean_abs_shap": 0.00796876847743988
+  },
+  {
+    "feature": "has_partner_1",
+    "mean_abs_shap": 0.0055691152811050415
+  },
+  {
+    "feature": "has_security_and_support_1",
+    "mean_abs_shap": 0.004261314868927002
+  },
+  {
+    "feature": "device_protection_Yes",
+    "mean_abs_shap": 0.003783495631068945
+  },
+  {
+    "feature": "online_backup_No internet service",
+    "mean_abs_shap": 0.0035279740113765
+  },
+  {
+    "feature": "addon_services_count",
+    "mean_abs_shap": 0.0
+  },
+  {
+    "feature": "tech_support_No internet service",
+    "mean_abs_shap": 0.0
+  },
+  {
+    "feature": "device_protection_No internet service",
+    "mean_abs_shap": 0.0
+  },
+  {
+    "feature": "streaming_tv_No internet service",
+    "mean_abs_shap": 0.0
+  },
+  {
+    "feature": "streaming_movies_No internet service",
+    "mean_abs_shap": 0.0
+  }
+]

@@ -1,0 +1,158 @@
+{
+  "dataset_overview": {
+    "total_records": 7043,
+    "total_features": 21,
+    "duplicate_rows": 0,
+    "duplicate_pct": 0.0
+  },
+  "missing_values": {
+    "counts": {},
+    "percentages": {},
+    "whitespace_anomalies": {
+      "TotalCharges": {
+        "blank_count": 11,
+        "blank_pct": 0.156,
+        "impact": "Stored as string with blank spaces; fails direct numeric casting.",
+        "treatment": "Converted to NULL or 0.0 with explicit documentation (associated with tenure=0)."
+      }
+    }
+  },
+  "target_distribution": {
+    "counts": {
+      "No": 5174,
+      "Yes": 1869
+    },
+    "percentages": {
+      "No": 73.46,
+      "Yes": 26.54
+    },
+    "class_imbalance_ratio": 2.77
+  },
+  "numeric_distributions": {
+    "SeniorCitizen": {
+      "mean": 0.16,
+      "std": 0.37,
+      "median": 0.0,
+      "min": 0.0,
+      "max": 1.0,
+      "iqr": 0.0,
+      "outliers_count": 1142,
+      "outliers_pct": 16.21,
+      "skewness": 1.834
+    },
+    "tenure": {
+      "mean": 32.37,
+      "std": 24.56,
+      "median": 29.0,
+      "min": 0.0,
+      "max": 72.0,
+      "iqr": 46.0,
+      "outliers_count": 0,
+      "outliers_pct": 0.0,
+      "skewness": 0.24
+    },
+    "MonthlyCharges": {
+      "mean": 64.76,
+      "std": 30.09,
+      "median": 70.35,
+      "min": 18.25,
+      "max": 118.75,
+      "iqr": 54.35,
+      "outliers_count": 0,
+      "outliers_pct": 0.0,
+      "skewness": -0.221
+    }
+  },
+  "categorical_summary": {
+    "customerID": {
+      "unique_values": 7043,
+      "top_value": "0002-ORFBO",
+      "top_value_frequency": 1
+    },
+    "gender": {
+      "unique_values": 2,
+      "top_value": "Male",
+      "top_value_frequency": 3555
+    },
+    "Partner": {
+      "unique_values": 2,
+      "top_value": "No",
+      "top_value_frequency": 3641
+    },
+    "Dependents": {
+      "unique_values": 2,
+      "top_value": "No",
+      "top_value_frequency": 4933
+    },
+    "PhoneService": {
+      "unique_values": 2,
+      "top_value": "Yes",
+      "top_value_frequency": 6361
+    },
+    "MultipleLines": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 3390
+    },
+    "InternetService": {
+      "unique_values": 3,
+      "top_value": "Fiber optic",
+      "top_value_frequency": 3096
+    },
+    "OnlineSecurity": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 3498
+    },
+    "OnlineBackup": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 3088
+    },
+    "DeviceProtection": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 3095
+    },
+    "TechSupport": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 3473
+    },
+    "StreamingTV": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 2810
+    },
+    "StreamingMovies": {
+      "unique_values": 3,
+      "top_value": "No",
+      "top_value_frequency": 2785
+    },
+    "Contract": {
+      "unique_values": 3,
+      "top_value": "Month-to-month",
+      "top_value_frequency": 3875
+    },
+    "PaperlessBilling": {
+      "unique_values": 2,
+      "top_value": "Yes",
+      "top_value_frequency": 4171
+    },
+    "PaymentMethod": {
+      "unique_values": 4,
+      "top_value": "Electronic check",
+      "top_value_frequency": 2365
+    },
+    "TotalCharges": {
+      "unique_values": 6531,
+      "top_value": " ",
+      "top_value_frequency": 11
+    },
+    "Churn": {
+      "unique_values": 2,
+      "top_value": "No",
+      "top_value_frequency": 5174
+    }
+  }
+}

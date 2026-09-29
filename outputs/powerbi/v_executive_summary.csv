@@ -1,0 +1,2 @@
+total_customers,churned_customers,retained_customers,churn_rate_pct,total_monthly_revenue,churned_monthly_revenue,avg_monthly_charges,avg_tenure_months
+7043,1869.0,5174.0,26.54,456116.6,139130.85,64.76,32.4

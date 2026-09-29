@@ -1,0 +1,10 @@
+{
+  "total_active_customers": 7043,
+  "historical_churn_rate_pct": 26.54,
+  "customers_at_high_or_critical_risk": 1515,
+  "total_monthly_revenue_exposure": 456116.6,
+  "total_monthly_expected_revenue_at_risk": 140036.26,
+  "annualized_expected_revenue_at_risk": 1680431.97,
+  "tier_1_vip_retention_priority_count": 490,
+  "tier_1_monthly_revenue_at_risk": 32945.59
+}

@@ -1,0 +1,5 @@
+value_tier,total_customers,churned_customers,churn_rate_pct,tier_monthly_revenue,churned_monthly_revenue,pct_of_total_revenue,avg_monthly_charges
+Q1 - Top 25% (High Value),1761,578.0,32.82,177649.95,57503.75,38.95,100.88
+Q2 - Upper Mid 25%,1761,660.0,37.48,141371.25,52952.0,30.99,80.28
+Q3 - Lower Mid 25%,1761,433.0,24.59,97996.6,23899.9,21.48,55.65
+Q4 - Bottom 25% (Low Value),1760,198.0,11.25,39098.8,4775.2,8.57,22.22
