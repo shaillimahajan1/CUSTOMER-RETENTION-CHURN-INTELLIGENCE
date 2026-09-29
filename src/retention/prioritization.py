@@ -117,16 +117,9 @@ class RetentionPrioritizer:
             "top_risk_driver",
             "recommended_action",
         ]
-        # Include original domain context columns
-        context_cols = [
-            "gender", "SeniorCitizen", "Partner", "Dependents", "tenure", "tenure_months",
-            "Contract", "contract_type", "InternetService", "internet_service",
-            "PaymentMethod", "payment_method", "PaperlessBilling", "has_paperless_billing",
-            "churn_label", "Churn"
-        ]
-        available_context = [c for c in context_cols if c in df.columns]
-
-        return df[final_cols + available_context]
+        # Return final columns first, followed by all domain and contextual features
+        existing_cols = [c for c in df.columns if c not in final_cols]
+        return df[final_cols + existing_cols]
 
     def _heuristic_risk_drivers(self, df: pd.DataFrame) -> pd.Series:
         """Determines predominant observable risk driver based on rule hierarchy."""

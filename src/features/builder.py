@@ -116,8 +116,22 @@ class DomainFeatureEngineer(BaseEstimator, TransformerMixin):
 
         # Standardize column naming if needed
         tenure_col = "tenure_months" if "tenure_months" in df.columns else "tenure"
-        monthly_col = "monthly_charges" if "monthly_charges" in df.columns else "MonthlyCharges"
-        total_col = "total_charges" if "total_charges" in df.columns else "TotalCharges"
+        if "monthly_charges" in df.columns:
+            monthly_col = "monthly_charges"
+        elif "MonthlyCharges" in df.columns:
+            monthly_col = "MonthlyCharges"
+        elif "monthly_revenue_exposure" in df.columns:
+            monthly_col = "monthly_revenue_exposure"
+        else:
+            monthly_col = "MonthlyCharges"
+
+        if "total_charges" in df.columns:
+            total_col = "total_charges"
+        elif "TotalCharges" in df.columns:
+            total_col = "TotalCharges"
+        else:
+            total_col = "total_charges"
+
         contract_col = "contract_type" if "contract_type" in df.columns else "Contract"
         internet_col = "internet_service" if "internet_service" in df.columns else "InternetService"
         tech_col = "tech_support" if "tech_support" in df.columns else "TechSupport"
